@@ -1,4 +1,4 @@
-h = 10
+h = 8
 
 for i in range(h):
     print(" "*(h-i), "*"*(i*2+1))
