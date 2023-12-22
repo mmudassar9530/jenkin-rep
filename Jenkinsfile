@@ -7,5 +7,15 @@ pipeline{
 
       }
     }
+    stage('Code Testing'){
+      steps{
+        sh '''python3 f1.py
+python3 f2.py'''
+      }
+    }
+    stage('deploy')
+    steps{
+      sh 'echo "Pipeline completed."'
+    }
   }
 }
