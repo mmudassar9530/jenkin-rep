@@ -9,13 +9,14 @@ pipeline{
     }
     stage('Code Testing'){
       steps{
-        python3 f1.py
-        python3 f2.py
+      sh  '''python3 f1.py
+        python3 f2.py'''
       }
     }
-    stage('deploy')
+    stage('deploy'){
     steps{
       sh 'echo "Pipeline completed."'
     }
   }
+}
 }
